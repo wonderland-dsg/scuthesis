@@ -696,6 +696,9 @@
     default = {Title},
     name    = title@en,
   },
+  sub-title = {
+    name = sub@title,
+  },
   author = {
     default = {姓名},
   },
@@ -903,12 +906,23 @@ reviewid = {
     \fi
   \fi
 }
-\newcommand\scu@titlepage@title{%
-  \begin{tabular}{lc}
-    {\heiti\zihao{3}\makebox[1.25cm][s]{\textbf{题目：}}}  & \hspace{-10pt}\scu@CJKunderline[10.5cm]{\heiti\zihao{3}\textbf{\scu@title}}
-    \\[25pt]
-    {\makebox[2cm][s]{}}       & \hspace{-10pt}\scu@CJKunderline[10.5cm]{\heiti\zihao{3}\textbf{\scu@title}}
+\newcommand\scu@titlepage@title@tabular[4]{%
+  \def\scu@cover@item##1##2##3{%
+  \ifx##3\@empty\else
+    \scu@pad{#2}{\scu@fixed@box{#1}{##1}}%
+    \scu@pad{#3}{}\scu@CJKunderline[8cm]{\centering##2{##3}}\\[25pt]
+  \fi
+  }%
+  \begin{tabular}{l}%
+    #4%
   \end{tabular}
+}
+\newcommand\scu@titlepage@title{%
+  \scu@titlepage@title@tabular{1.5cm}{1.5cm}{0.2cm}{%
+    \heiti\zihao{3}
+    \scu@cover@item{题目:}{}{\scu@title}%
+    \scu@cover@item{}{}{\scu@sub@title}%
+  }\par
 }
 \newcommand\scu@titlepage@depstuid{%
   \begin{tabular}{cl}
