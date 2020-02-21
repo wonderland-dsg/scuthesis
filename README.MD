@@ -2,7 +2,7 @@
 四川大学研究生学位论文LaTeX模板，持续更新中，
 有问题和错误在[GitHub Issues](https://github.com/wonderland-dsg/scuthesis/issues)提问。
 # 使用说明
-```bash git clone https://github.com/wonderland-dsg/scuthesis.git`
+```bash git clone https://github.com/wonderland-dsg/scuthesis.git
 ```
 在例子上进行修改，编译指令如下
 
