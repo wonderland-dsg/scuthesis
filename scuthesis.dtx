@@ -1390,7 +1390,7 @@
   },
 %    \end{macrocode}
 %
-% 论文中英文题目。
+% 论文中英文题目。中文标题过长需要手动拆分一部分作为子标题，TODO：两行标题第二行居中还是靠左有待确认，此处先居中
 %    \begin{macrocode}
   title = {
     default = {标题},
@@ -1399,6 +1399,7 @@
     default = {Title},
     name    = title@en,
   },
+  subtitle = {},
 %    \end{macrocode}
 %
 % 作者、导师、副导师、联合指导老师。
@@ -1729,13 +1730,15 @@ reviewid = {
 %    \end{macrocode}
 %
 %
-% 题名使用三号黑体字，一行写不下时可分两行写。
+% 题名使用三号黑体字，一行写不下时可分两行写。分两行写
 %    \begin{macrocode}
 \newcommand\scu@titlepage@title{%
   \begin{tabular}{lc}
     {\heiti\zihao{3}\makebox[1.25cm][s]{\textbf{题目：}}}  & \hspace{-10pt}\scu@CJKunderline[10.5cm]{\heiti\zihao{3}\textbf{\scu@title}}
-    \\[25pt]
-    {\makebox[2cm][s]{}}       & \hspace{-10pt}\scu@CJKunderline[10.5cm]{\heiti\zihao{3}\textbf{\scu@title}}
+    \ifx\scu@subtitle\@empty\else
+      \\[25pt]
+      {\makebox[2cm][s]{}}       & \hspace{-10pt}\scu@CJKunderline[10.5cm]{\heiti\zihao{3}\textbf{\scu@subtitle}}
+    \fi
   \end{tabular}
 }
 %    \end{macrocode}
