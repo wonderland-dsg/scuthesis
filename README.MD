@@ -2,7 +2,8 @@
 四川大学研究生学位论文LaTeX模板，持续更新中，
 有问题和错误在[GitHub Issues](https://github.com/wonderland-dsg/scuthesis/issues)提问。
 # 使用说明
-```bash git clone https://github.com/wonderland-dsg/scuthesis.git
+```bash 
+git clone https://github.com/wonderland-dsg/scuthesis.git
 ```
 在例子上进行修改，编译指令如下
 
@@ -17,18 +18,18 @@ latexmk -c             # 清理编译生成的辅助文件
 ## 手动编译
 编译文档
 ```bash
-  $ xetex scuthesis.ins  # 生成 scuthesis.cls
-  $ xelatex main.tex
-  $ bibtex main.tex      # 生成 bbl 文件
-  $ xelatex main.tex     # 解决引用
-  $ xelatex main.tex     # 生成完整的 pdf 文件
+ xetex scuthesis.ins  # 生成 scuthesis.cls
+ xelatex main.tex
+ bibtex main.tex      # 生成 bbl 文件
+ xelatex main.tex     # 解决引用
+ xelatex main.tex     # 生成完整的 pdf 文件
 ```
 
 下面的命令用来生成用户手册，
 ```bash
-  $ xelatex scuthesis.dtx
-  $ makeindex -s gind.ist -o scuthesis.ind scuthesis.idx
-  $ makeindex -s gglo.ist -o scuthesis.gls scuthesis.glo
-  $ xelatex scuthesis.dtx
-  $ xelatex scuthesis.dtx  #生成说明文档 scuthesis.pdf
+ xelatex scuthesis.dtx
+ makeindex -s gind.ist -o scuthesis.ind scuthesis.idx
+ makeindex -s gglo.ist -o scuthesis.gls scuthesis.glo
+ xelatex scuthesis.dtx
+ xelatex scuthesis.dtx  #生成说明文档 scuthesis.pdf
 ```
