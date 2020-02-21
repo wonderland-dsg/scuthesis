@@ -1,0 +1,68 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+
+\documentclass[degree=master, degree-type=academic, review=cameraready]{scuthesis}
+  % 学位 degree:
+  %   master | doctor |其他的还没实现
+  % 学位类型 degree-type:
+  %   academic（默认）| professional
+  % 盲审 review:
+  %   cameraready | blind
+
+% 论文基本配置，加载宏包等全局配置
+\input{scusetup.tex}
+
+
+\begin{document}
+
+% 封面
+\maketitle
+
+% 声明和授权
+\copyrightpage
+% 需要用到扫描的
+%\copyrightpage[/path/to/xxx.pdf]
+
+\frontmatter
+\input{chapters/abstract.tex}
+
+% 目录
+\tableofcontents
+
+% 符号对照表
+\input{chapters/denotation}
+
+
+% 正文部分
+\mainmatter
+\input{chapters/chap01}
+\input{chapters/chap02}
+
+
+% 其它部分
+\backmatter
+
+%% 如果需要建立索引
+% \listoffigures    % 插图索引
+% \listoftables     % 表格索引
+% \listofequations  % 公式索引
+
+% 参考文献
+\bibliographystyle{gbt7714-2005}      % gbt7714-2005 标准
+\nocite{*}
+\bibliography{ref/test}
+
+% 致谢
+\input{chapters/acknowledgements}
+
+
+% 附录，可以加入多个附录
+\appendix
+%\input{chapters/appendix}
+
+% 个人简历
+\input{chapters/resume}
+
+
+\end{document}

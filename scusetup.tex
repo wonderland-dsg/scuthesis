@@ -1,0 +1,161 @@
+% !TeX root = ./main.tex
+
+% 论文基本信息配置
+
+\scusetup{
+  %******************************
+  % 注意：
+  %   1. 配置里面不要出现空行
+  %   2. 不需要的配置信息可以删除
+  %******************************
+  %
+  % 标题
+  %   可使用“\\”命令手动控制换行
+  %
+  title  = {党所贵的学位论文},
+  title* = {Dang's Thesis},
+  %
+  % 学位
+  % 学科名称以国务院学位委员会颁布的《授予博士、硕士学位和培养研究生的学科、专业目录》为准，
+  %     1. 学术学位研究生的学位类别填写为：理（工、农）学博士或理（工、农）学硕士，
+  %        学科专业填写为：一级学科-二级学科，如：生物学-动物学，生态学-动物生态学。
+  %     2.专业学位研究生的学位类别填写为：林业硕士或工程硕士，
+  %        领域名称填写：生物医学工程或生物工程，林业硕士未分设领域，填写：无。
+  %
+  degree-name  = {工学硕士},
+  degree-name* = {Master of Engineering},
+  %
+  % 培养单位
+  %   填写所属院系的全名
+  %
+  department = {计算机学院},
+  %
+  % 学科名称
+  %   以国务院学位委员会颁布的《授予博士、硕士学位和培养研究生的学科、专业目录》为准，
+  %     1. 学术学位研究生的学位类别填写为：理（工、农）学博士或理（工、农）学硕士，
+  %        学科专业填写为：一级学科-二级学科，如：生物学-动物学，生态学-动物生态学。
+  %     2.专业学位研究生的学位类别填写为：林业硕士或工程硕士，
+  %        领域名称填写：生物医学工程或生物工程，林业硕士未分设领域，填写：无。
+  %
+  discipline  = {计算机科学与技术},
+  discipline* = {Computer Science and Technology},
+  %
+  % 姓名
+  %
+  author  = {党所贵},
+  author* = {Dang Suogui},
+  %
+  % 指导教师
+  %   填写经培养单位批准备案的的导师姓名，并加上专业技术职称（联合培养专项计划博士研究生填写双导师信息）。
+  %   中文姓名和职称之间以英文逗号“,”分开
+  %
+  supervisor  = {燕锐,教授},
+  supervisor* = {Prof., Yan Rui},
+  %
+  % 副指导教师
+  %   填写经培养单位批准备案的的导师姓名，并加上专业技术职称（联合培养专项计划博士研究生填写双导师信息）。
+  %   中文姓名和职称之间以英文逗号“,”分开
+  %
+  %associate-supervisor  = {燕锐,教授},
+  %associate-supervisor* = {Prof., Yan Rui},
+  %
+  % 联合指导教师
+  %
+  % joint-supervisor  = {燕锐,教授},
+  % joint-supervisor* = {Prof., Yan Rui},
+  %
+  % 论文完成日期
+  %   使用 ISO 格式；默认为当前时间
+  %
+  % date = {2020-02-02},
+  %
+  % 论文答辩日期
+  %   使用 ISO 格式；默认为当前时间
+  %
+  % presentdate = {2020-02-02},
+  %
+  % 学位授予日期
+  %   使用 ISO 格式；默认为当前时间
+  %
+  % degreedate = {2020-02-02},
+  %
+  % 密级和年限
+  %   涉密论文必须在论文封面标注密级，同时注明保密年限。公开论文不标注密级，可删除。
+  %   没有公布具体的格式样式，此处先占位，有需要再实现。
+  %
+  % secret-level = {秘密},
+  % secret-year  = {10},
+  %
+  %
+  % 学号。
+  %  stuid = {1234},
+  %
+  % 送审编号。
+  % 
+  %  reviewid = {1234},
+  %
+  % 单位编号。
+  %    默认是 10610
+  %    departmentid = {1254},
+}
+
+%% 下面放需要用到pkg，有额外需要的可以在这里添加
+
+% 表格中支持跨行
+\usepackage{multirow}
+
+% 跨页表格
+\usepackage{longtable}
+
+% 固定宽度的表格
+\usepackage{tabularx}
+
+% 表格中的反斜线
+\usepackage{diagbox}
+
+% 确定浮动对象的位置，可以使用 H，强制将浮动对象放到这里
+\usepackage{float}
+
+% 浮动图形控制宏包。
+% 允许上一个 section 的浮动图形出现在下一个 section 的开始部分
+% 该宏包提供处理浮动对象的 \FloatBarrier 命令，使所有未处
+% 理的浮动图形立即被处理。这三个宏包仅供参考，未必使用：
+% \usepackage[below]{placeins}
+% \usepackage{floatflt} % 图文混排用宏包
+% \usepackage{rotating} % 图形和表格的控制旋转
+
+% 定理类环境宏包
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+
+% 给自定义的宏后面自动加空白
+% \usepackage{xspace}
+
+% 借用 ltxdoc 里面的几个命令。
+\def\cmd#1{\cs{\expandafter\cmd@to@cs\string#1}}
+\def\cmd@to@cs#1#2{\char\number`#2\relax}
+\DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
+
+\newcommand*{\meta}[1]{{%
+  \ensuremath{\langle}\rmfamily\itshape#1\/\ensuremath{\rangle}}}
+\providecommand\marg[1]{%
+  {\ttfamily\char`\{}\meta{#1}{\ttfamily\char`\}}}
+\providecommand\oarg[1]{%
+  {\ttfamily[}\meta{#1}{\ttfamily]}}
+\providecommand\parg[1]{%
+  {\ttfamily(}\meta{#1}{\ttfamily)}}
+\providecommand\pkg[1]{{\sffamily#1}}
+
+% 定义所有的图片文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+% 数学命令，按照自己的习惯，添加修改。
+\input{math_commands.tex}
+
+% 定义自己常用的东西，例如
+% Figure reference, lower-case.
+% \def\figref#1{figure~\ref{#1}}
+% Figure reference, capital. For start of sentence
+% \def\Figref#1{Figure~\ref{#1}}
+
+% hyperref 宏包在最后调用
+\usepackage{hyperref}

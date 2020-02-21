@@ -1,0 +1,14 @@
+*.aux
+*.glo
+*.hd
+*.idx
+*.log
+*.out
+*.gz
+*.bbl
+*.blg
+*.thm
+*.toc
+*.gls
+*.ilg
+*.ind
