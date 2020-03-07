@@ -1,0 +1,18 @@
+# Fdb version 3
+["latex"] 1583551284 "scuthesis.dtx" "scuthesis.dvi" "scuthesis" 1583551284
+  "/usr/local/texlive/2019/texmf-dist/tex/generic/iftex/iftex.sty" 1573336935 6902 30fdaf7dc5636b8e3afa306210c45cae ""
+  "/usr/local/texlive/2019/texmf-dist/tex/generic/iftex/ifxetex.sty" 1572645307 488 4565444a3e75e59cb2702dc42e18f482 ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls" 1573078358 19931 ac2a201ee7969e5fc885f1f0445b10c6 ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/base/doc.sty" 1573426260 30472 d4167fb4fbb135ad05944e0a1fff7ef3 ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/base/ltxdoc.cls" 1570222634 7984 fae2434a3460603fc722a4e08b836a4c ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo" 1573078358 8446 1f8cadb2c4b2fd1ad8a2d81d1490f997 ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty" 1570222634 31158 cae2ad811c8e8846a5be16c9984d4859 ""
+  "/usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf" 1577314212 39451 6c50cbbc48279cc2d67f72e32ca48ad5 ""
+  "/usr/local/texlive/2019/texmf-var/web2c/pdftex/latex.fmt" 1580321349 4294786 50953030939891832a93b14329cc11ab ""
+  "/usr/local/texlive/2019/texmf.cnf" 1580321275 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "dtx-style.sty" 1582301461 5418 e6350258bba36380cbe6ea57455ec695 ""
+  "scuthesis.aux" 1583551264 6538 beb890998201afad16a00799fb6c55d0 "latex"
+  "scuthesis.dtx" 1583551258 79168 532bf2ad0794dc751e4da5022f8283e2 ""
+  (generated)
+  "scuthesis.dvi"
+  "scuthesis.log"
